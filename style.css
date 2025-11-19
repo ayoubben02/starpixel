@@ -1,0 +1,135 @@
+
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background: #222;
+    color: #fff;
+}
+
+.brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Nav links */
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    background: rgba(255,255,255,0.06);
+}
+
+/* CTA */
+.nav-cta {
+    background: #ff6b6b;
+    color: #fff;
+    padding: 0.45rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Hamburger (mobile) */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+/* Responsive: collapse to hamburger */
+@media (max-width: 720px) {
+    .nav-toggle { display: block; 
+    position: absolute;
+    right: 10px;}
+
+    .nav-links {
+        position: absolute;
+        top: 56px; /* height of navbar */
+        right: 0;
+        background: #222;
+        flex-direction: column;
+        width: 200px;
+        padding: 0.5rem;
+        transform-origin: top right;
+        transform: scaleY(0);
+        transition: transform 160ms ease-in-out;
+        border-radius: 4px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+
+    .nav-links.show {
+        transform: scaleY(1);
+    }
+}
+
+.products {
+  padding: 40px;
+  background: #f5f5f5;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  width: 30%;
+  background: #fff;
+  padding: 20px;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.price {
+  color: #27ae60;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.btn {
+  background: #3498db;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #2980b9;
+}
+
