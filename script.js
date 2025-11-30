@@ -36,7 +36,7 @@ const container = document.querySelector(".product-list");
 products.forEach(p => {
   container.innerHTML += `
     <div class="product-card">
-      <img src="${p.image}" alt="${p.name}">
+      <img src="${p.image}" alt="${p.name}" oncontextmenu="return false;">
       <h3>${p.name}</h3>
       <p class="price">${p.price}</p>
       <a href="${p.link}"><button class="btn">Buy Now</button></a>
